@@ -1,4 +1,4 @@
-package pvt.lee.spring.modle;
+package pvt.lee.spring.name;
 
 public class Mouse {
 

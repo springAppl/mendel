@@ -4,14 +4,14 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class="pvt.lee.spring.modle.Mouse" name="mouse" id="pvt.lee.spring.modle.mouse">
+    <bean class="pvt.lee.spring.name.Mouse" name="mouse" id="pvt.lee.spring.name.mouse">
         <property name="brand" value="legend"/>
     </bean>
-    <bean class="pvt.lee.spring.modle.Keyboard" name="keyboard"></bean>
+    <bean class="pvt.lee.spring.name.Keyboard" name="keyboard"></bean>
 
-    <alias name="pvt.lee.spring.modle.mouse" alias="aliMouse"/>
+    <alias name="pvt.lee.spring.name.mouse" alias="aliMouse"/>
 
-    <bean class="pvt.lee.spring.modle.Computer" name="computer">
+    <bean class="pvt.lee.spring.name.Computer" name="computer">
         <property name="keyboard" ref="keyboard"/>
         <property name="mouse" ref="aliMouse"/>
     </bean>
