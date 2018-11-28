@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="pvt.lee.spring.modle.Mouse" name="mouse" id="pvt.lee.spring.modle.mouse">
+        <property name="brand" value="legend"/>
+    </bean>
+    <bean class="pvt.lee.spring.modle.Keyboard" name="keyboard"></bean>
+
+    <alias name="pvt.lee.spring.modle.mouse" alias="aliMouse"/>
+
+    <bean class="pvt.lee.spring.modle.Computer" name="computer">
+        <property name="keyboard" ref="keyboard"/>
+        <property name="mouse" ref="aliMouse"/>
+    </bean>
+
+</beans>
