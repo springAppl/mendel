@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean class="pvt.lee.spring.autowir.BathMan" name="bathMan"/>
+
+    <bean class="pvt.lee.spring.autowir.SuperMan" name="superMan"/>
+
+    <bean class="pvt.lee.spring.autowir.AronMan" name="aronMan"/>
+
+    <bean class="pvt.lee.spring.autowir.Marvel" name="marvel" autowire="byName">
+    </bean>
+
+    <bean class="pvt.lee.spring.autowir.DC" name="dc" autowire="byName" />
+
+    <bean class="pvt.lee.spring.autowir.HeroCompany" name="heroCompany" autowire="constructor"/>
+</beans>
