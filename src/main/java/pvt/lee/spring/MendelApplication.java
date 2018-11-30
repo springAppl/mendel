@@ -10,6 +10,7 @@ import pvt.lee.spring.autowir.HeroCompany;
 import pvt.lee.spring.autowir.Marvel;
 import pvt.lee.spring.dependency.ConUnit;
 import pvt.lee.spring.dependency.SetUnit;
+import pvt.lee.spring.factory.Car;
 import pvt.lee.spring.instant.Item;
 import pvt.lee.spring.name.Computer;
 
@@ -70,5 +71,22 @@ public class MendelApplication {
 		System.out.println(heroCompany);
 		Assert.assertEquals(dc, heroCompany.getDc());
 		Assert.assertEquals(marvel, heroCompany.getMarvel());
+	}
+
+	@Test
+	public void aware(){
+		ApplicationContext context = new ClassPathXmlApplicationContext("aware.xml");
+	}
+
+	@Test
+	public void processor(){
+		new ClassPathXmlApplicationContext("processor.xml");
+	}
+
+	@Test
+	public void factory(){
+		ApplicationContext context = new ClassPathXmlApplicationContext("factory.xml");
+		Car car = context.getBean(Car.class);
+		System.out.println(car);
 	}
 }
